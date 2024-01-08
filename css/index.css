@@ -25,10 +25,29 @@ body {
     max-width: 70vw;
     margin-inline: auto;
     padding-inline: 1rem;
+    border-left: 3px solid orange;
+    border-right: 3px solid orange;
+
 }
 
 header {
-    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 13px dotted #e17503;
+
+}
+
+#headshot {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    /* background-color: whitesmoke; */
+    background-image: url("//unsplash.it/100/100");
+    background-size: cover;
 }
 
 .section_title {
@@ -44,10 +63,17 @@ section {
 .projekt_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .projekt_box {
     height: 15rem;
     background-color: aqua;
+    margin: 10px;
+    border: 10px solid #289dc3;
+}
+
+.projekt_box:hover {
+    box-shadow: 1px 1px 50px white;
+    margin: 0;
 }
