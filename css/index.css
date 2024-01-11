@@ -1,79 +1,180 @@
-/* @font-face {
-    font-family: ;
-    src: url();
-} */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+@font-face {
+    font-family: "Space Mono";
+    src: url("../fonts/SpaceMono-Regular.ttf");
 }
 
-html {
-    color-scheme: dark light;
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
 }
 
-:root {}
+:root {
+    --white: #F2F2F2;
+    --black: #000000;
+    --light-grey: #E0E0E0;
+    --grey: #B6BAC3;
+    --purple: #5F49F2;
+
+    --border-radius: 10px;
+}
+
 
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.25rem;
+    background: var(--white);
+    /* font-size: 1.25rem; */
+    color: var(--black);
+    position: relative;
 }
 
-.wrapper {
-    max-width: 70vw;
-    margin-inline: auto;
-    padding-inline: 1rem;
-    border-left: 3px solid orange;
-    border-right: 3px solid orange;
-
-}
-
+/*__________________Landing page*/
 header {
-    margin-top: 2rem;
-    padding: 2rem;
-    font-size: 2rem;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 6vw;
+    border-bottom: 2px solid var(--grey);
+    font-family: "Space Mono";
+
+    & .menuContainer {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border-bottom: 13px dotted #e17503;
-
 }
 
-#headshot {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    /* background-color: whitesmoke; */
-    background-image: url("//unsplash.it/100/100");
-    background-size: cover;
+
+.heroContentWrapper {
+    font-family: "Roboto";
+
+    & .grettingsContainer {
+        margin-bottom: 10px;
+
+        & h3,
+        h1 {
+            margin: 0;
+        }
+
+        & h1 {
+            font-size: 52px;
+        }
+
+        & span {
+            color: var(--purple);
+        }
+    }
+
+    & .figureTitleContainer {
+        display: flex;
+        gap: 4rem;
+
+        & .titleTextContainer {
+            width: 620px;
+        }
+
+        & h2 {
+            font-size: 52px;
+            margin: 0;
+        }
+
+        & #tabSpace {
+            margin-left: 200px;
+        }
+
+
+    }
 }
 
-.section_title {
-    font-size: 2.25rem;
-    text-align: center;
-    margin-bottom: 5rem;
+figure {
+    margin: 0;
+    height: 300px;
+    width: 300px;
+    /* background-color: var(--light-grey); */
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+
+    & div {
+        border-radius: 50%;
+        background-color: var(--light-grey);
+        transition: background-color 1s;
+    }
 }
 
-section {
-    padding-block: 5rem;
+
+/*__________________Scroller bar*/
+.scroller {
+    font-family: "Roboto";
+    background-color: var(--black);
+    margin: 0 20px;
+    border-radius: var(--border-radius);
+    padding-block: .75rem;
+    overflow: hidden;
+
+    & .innerScroller {
+        display: flex;
+        padding-left: 0;
+        width: max-content;
+        gap: 1rem;
+        /* animation: scroll 20s linear infinite; */
+    }
+
+    & li {
+        font-size: 30px;
+        list-style: none;
+        color: var(--white);
+        flex-shrink: 0;
+    }
+
+    & li:nth-child(odd) {
+        color: var(--purple);
+    }
 }
 
-.projekt_grid {
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+#projects {
+    margin: 0 20px;
+}
+
+.sectionTitle {
+    font-size: 30px;
+    font-family: "Space Mono";
+    display: inline;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: -35px;
+        height: 20px;
+        width: 20px;
+        background-color: #5F49F2;
+    }
+}
+
+.projectGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
+    gap: 2rem;
+    height: 800px;
 
-.projekt_box {
-    height: 15rem;
-    background-color: aqua;
-    margin: 10px;
-    border: 10px solid #289dc3;
-}
-
-.projekt_box:hover {
-    box-shadow: 1px 1px 50px white;
-    margin: 0;
+    & .projectBox {
+        border-radius: var(--border-radius);
+        background-color: #303030;
+    }
 }
