@@ -15,12 +15,12 @@
         <h3>Adam Eliasson</h3>
         <div class="menuContainer">
             <h4>Projects</h4>
-            <h4>About me</h4>
+            <h4>About</h4>
             <h4>Contact</h4>
         </div>
     </header>
 
-    <section id="hero">
+    <section id="hero" class="container">
         <div class="heroContentWrapper">
             <div class="grettingsContainer">
                 <h3>HI THERE</h3>
@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <div class="scroller">
+    <div class="scroller container">
         <ul class="innerScroller">
             <li>WAX ON WAX OFF</li>
             <li>WAX ON WAX OFF</li>
@@ -49,34 +49,96 @@
         </ul>
     </div>
 
-    <section id="projects">
-        <h2 class="sectionTitle">Projects</h2>
+    <section id="projects" class="container">
+        <h1 class="sectionTitle">Projects</h1>
         <div class="projectGrid">
-            <div class="projectBox">
-                <img src="" alt="">
-                <h3>ClassCode</h3>
-                <div class="tags"></div>
-                <a href="#">See this project</a>
+            <div class="projectBox" id="classcode">
+                <img src="resources/classcode.png" alt="">
+                <div class="projectInfo">
+                    <ul class="tags">
+                        <li>Development</li>
+                        <li>Algoritms</li>
+                        <li>Team</li>
+                        <li>Website</li>
+                    </ul>
+                    <h3>ClassCode</h3>
+                </div>
+                <!-- <div class="projectLink">
+                    <a href="https://wdu.maumt.se/ht22/bed_bird/ClassCode/" target="_blank">See this project</a>
+                </div> -->
+            </div>
+            <div class="projectBox" id="connectfour">
+                <img src="resources/connect-four.png" alt="">
+                <div class="projectInfo">
+                    <ul class="tags">
+                        <li>Development</li>
+                        <li>Algoritms</li>
+                        <li>Game</li>
+                    </ul>
+                    <h3>Connect Four</h3>
+                </div>
+                <!-- <div class="projectLink">
+                    <a href="https://adameli.github.io/connectfour/">See this project</a>
+                </div> -->
+            </div>
+            <div class="projectBox" id="vemkanmest">
+                <img src="resources/vem-kan-mest-side.jpg" alt="">
+                <div class="projectInfo">
+                    <ul class="tags">
+                        <li>Development</li>
+                        <li>Game</li>
+                        <li>Team</li>
+                        <li>Figma</li>
+                    </ul>
+                    <h3>Vem kan mest</h3>
+                </div>
+                <div class="projectLink">
+                    <!-- <a href="http://www.maumt.se/wdu/ht22/students/designstudio/case_4/index.html" target="_blank">See
+                        this project</a> -->
+                </div>
             </div>
             <div class="projectBox">
-                <img src="" alt="">
-                <h3>ClassCode</h3>
-                <div class="tags"></div>
-                <a href="#">See this project</a>
+                <img src="resources/connect-four.png" alt="">
+                <div class="projectInfo">
+                    <ul class="tags">
+                        <li>Development</li>
+                        <li>Algoritms</li>
+                        <li>Team</li>
+                    </ul>
+                    <h3>ClassCode</h3>
+                </div>
+                <!-- <div class="projectLink">
+                    <a href="#">See this project</a>
+                </div> -->
             </div>
-            <div class="projectBox">
-                <img src="" alt="">
-                <h3>ClassCode</h3>
-                <div class="tags"></div>
-                <a href="#">See this project</a>
-            </div>
-            <div class="projectBox"></div>
+
 
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="container">
+        <div class="aboutWrapper">
 
+
+            <div class="cross upRight"></div>
+            <div class="cross dwRight"></div>
+            <div class="cross dwLeft"></div>
+            <h1>About me</h1>
+            <div class="gridContainer">
+                <img src="resources/DSC_6493.JPG" alt="" id="headshot">
+                <div class="gridBox aboutText">
+                    <h3>Who i'm I</h3>
+                    <p>Currently, I am enrolled in the Media Technology Web-Based Design and Development program at
+                        Malmö
+                        University. By graduation 2025 i’ll be equipped with a comprehensive skill set in web
+                        development
+                        and design. I am eager to leverage my newly acquired skills in the dynamic and competitive work
+                        market.</p>
+                </div>
+                <div class="gridBox skills"></div>
+                <div class="gridBox "></div>
+            </div>
+        </div>
     </section>
 
     <script src="./index.js"></script>
