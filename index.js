@@ -16,7 +16,7 @@ function changeFigure(numbers) {
         if (numbers.includes(parseInt(dot.id))) {
             dot.style.backgroundColor = "#5F49F2";
         } else {
-            dot.style.backgroundColor = "#E0E0E0";
+            dot.style.backgroundColor = "#FFFFFF";
         }
     })
 }
@@ -41,4 +41,41 @@ scrollerContent.forEach(item => {
     scrollerInner.appendChild(duplicatedItem);
 })
 
-document.getElementById("classcode").addEventListener("click", function () { window.location.href("https://wdu.maumt.se/ht22/bed_bird/ClassCode/") })
+
+document.getElementById("navProject").addEventListener("click", (e) => {
+    window.scroll({
+        top: document.getElementById('projects').offsetTop,
+        left: 100,
+        behavior: "smooth",
+    });
+
+})
+document.getElementById("navAbout").addEventListener("click", (e) => {
+    window.scroll({
+        top: document.getElementById('about').offsetTop,
+        left: 100,
+        behavior: "smooth",
+    });
+
+})
+
+// window.addEventListener("scroll", (e) => {
+//     console.log(window.pageYOffset);
+//     let projectsScroll = document.getElementById('projects').offsetTop
+//     console.log(projectsScroll);
+//     if (window.screenTop > projectsScroll) {
+//         console.log("yes");
+//     }
+// })
+
+window.addEventListener("scroll", setScrollVar)
+window.addEventListener("resize", setScrollVar)
+
+function setScrollVar() {
+    const htmlElement = document.documentElement;
+    const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight;
+    console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
+    htmlElement.style.setProperty("--scroll", Math.min(percentOfScreenHeightScrolled * 100, 100));
+}
+
+setScrollVar()
