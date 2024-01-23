@@ -74,13 +74,14 @@ window.addEventListener("resize", setScrollVar)
 function setScrollVar() {
     const htmlElement = document.documentElement;
     const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight;
-    console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
+    // console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
     htmlElement.style.setProperty("--scroll", Math.min(percentOfScreenHeightScrolled * 100, 100));
 }
 
 setScrollVar()
 
 const observer = new IntersectionObserver(entries => {
+    console.log(entries);
     for (let i = entries.length - 1; i >= 0; i--) {
         const entry = entries[i];
         if (entry.isIntersecting) {
