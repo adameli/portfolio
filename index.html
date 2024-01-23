@@ -5,22 +5,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Adam Eliasson Webbdeveloper</title>
 </head>
 
 <body>
+    <div class="imgs">
+        <img src="resources/classcode.png" alt="" id="classcode" data-img>
+        <img src="resources/connect-four.png" alt="" id="connect-four" data-img>
+        <img src="resources/vem-kan-mest-side.jpg" alt="" id="vem-kan-mest" data-img>
+    </div>
+    <section class="top-section full-screen">
+        <div class="left-container">
+            <h1>Webbdeveloper Designer</h1>
+            <p>Currently, I am enrolled in the Media Technology Web-Based Design and Development program at
+                Malmö University</p>
+        </div>
+        <div class="right-container"></div>
+        <div class="floating-element" id="circle"></div>
+    </section>
 
-    <header>
+    <section class="full-screen about-section">
+        <h1>About me</h1>
+        <div class="aboutWrapper">
+            <div class="cross upRight"></div>
+            <div class="cross dwRight"></div>
+            <div class="cross dwLeft"></div>
+            <div class="gridContainer">
+                <img src="resources/DSC_6493.JPG" alt="" id="headshot">
+                <div class="gridBox aboutText">
+                    <h3>Who i'm I</h3>
+                    <p>Currently, I am enrolled in the Media Technology Web-Based Design and Development program at
+                        Malmö
+                        University. By graduation 2025 i’ll be equipped with a comprehensive skill set in web
+                        development
+                        and design. I am eager to leverage my newly acquired skills in the dynamic and competitive work
+                        market.</p>
+                </div>
+                <div class="gridBox skills">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+                </div>
+                <div class="gridBox "></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="full-screen classcode">
+        <h1>ClassCode</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit incidunt sapiente at laborum magni
+            voluptates totam dolorem. Omnis quia ut provident et quos molestiae nemo maiores. Laboriosam obcaecati
+            aspernatur odit maiores in praesentium voluptas, velit accusamus, odio eum non quasi hic labore, possimus
+            repudiandae corrupti deleniti! Eligendi doloremque fuga eaque modi mollitia nulla expedita aut atque odit
+            sunt cum commodi fugit facilis quia magnam repudiandae aliquam quod tempora sed, maiores at rem ad! Deleniti
+            eos rem iste magnam minima provident ad placeat eius omnis corporis. Tempore sunt, eos praesentium enim
+            itaque placeat commodi aperiam modi distinctio impedit molestias nostrum illo?</p>
+        <div data-img-show="#classcode"></div>
+    </section>
+    <section class="full-screen connect-four">
+        <h1>Connetc Four</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit incidunt sapiente at laborum magni
+            voluptates totam dolorem. Omnis quia ut provident et quos molestiae nemo maiores. Laboriosam obcaecati
+            aspernatur odit maiores in praesentium voluptas, velit accusamus, odio eum non quasi hic labore, possimus
+            repudiandae corrupti deleniti! Eligendi doloremque fuga eaque modi mollitia nulla expedita aut atque odit
+            sunt cum commodi fugit facilis quia magnam repudiandae aliquam quod tempora sed, maiores at rem ad! Deleniti
+            eos rem iste magnam minima provident ad placeat eius omnis corporis. Tempore sunt, eos praesentium enim
+            itaque placeat commodi aperiam modi distinctio impedit molestias nostrum illo?</p>
+        <div data-img-show="#connect-four"></div>
+    </section>
+    <section class="full-screen vem-kan-mest">
+        <h1>Vem kan Mest?</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit incidunt sapiente at laborum magni
+            voluptates totam dolorem. Omnis quia ut provident et quos molestiae nemo maiores. Laboriosam obcaecati
+            aspernatur odit maiores in praesentium voluptas, velit accusamus, odio eum non quasi hic labore, possimus
+            repudiandae corrupti deleniti! Eligendi doloremque fuga eaque modi mollitia nulla expedita aut atque odit
+            sunt cum commodi fugit facilis quia magnam repudiandae aliquam quod tempora sed, maiores at rem ad! Deleniti
+            eos rem iste magnam minima provident ad placeat eius omnis corporis. Tempore sunt, eos praesentium enim
+            itaque placeat commodi aperiam modi distinctio impedit molestias nostrum illo?</p>
+        <div data-img-show="#vem-kan-mest"></div>
+    </section>
+
+    <!-- <header>
         <h3>Adam Eliasson</h3>
         <div class="menuContainer">
             <h4 id="navProject">Projects</h4>
             <h4 id="navAbout">About</h4>
             <h4>Contact</h4>
         </div>
-    </header>
+    </header> -->
 
-    <section id="hero" class="container">
+    <!-- <section id="hero" class="container">
         <div class="heroContentWrapper">
             <div class="grettingsContainer">
                 <h3>HI THERE</h3>
@@ -98,13 +175,13 @@
                     </ul>
                     <h3>ClassCode</h3>
                 </div>
-                <!-- <div class="projectLink">
+                <div class="projectLink">
                     <a href="#">See this project</a>
                 </div> -->
-            </div>
+    <!-- </div>
 
 
-        </div>
+    </div>
     </section>
 
     <section id="about" class="container">
@@ -136,7 +213,7 @@
                 <div class="gridBox "></div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <script src="./index.js"></script>
 </body>
