@@ -11,6 +11,7 @@
 :root {
     --white: #FFFFFF;
     --background-grey: #ddd;
+    --background-white: #f3f3f3;
     --black: #000000;
     --light-grey: #E0E0E0;
     --grey: #B6BAC3;
@@ -27,7 +28,7 @@
 
 body {
     margin: 0;
-    background: var(--background-grey);
+    background: var(--background-white);
     /* font-size: 1.25rem; */
     color: var(--black);
     position: relative;
@@ -67,49 +68,59 @@ header {
 #hero {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
 
 .heroContentWrapper {
     font-family: "Roboto";
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
 
-    & .grettingsContainer {
-        margin-bottom: 10px;
+.headshot-container {
+    width: 400px;
+    position: relative;
 
-        & h3,
-        h1 {
-            margin: 0;
-        }
+}
 
-        & h1 {
-            font-size: 52px;
-        }
+.headshot-container img {
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+.introduction-container {
+    flex-grow: 1;
+}
+
+.title-text-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    & h4 {
+        font-size: 20px;
 
         & span {
             color: var(--purple);
         }
     }
 
-    & .figureTitleContainer {
-        display: flex;
-        gap: 4rem;
+    & h2 {
+        font-size: 62px;
+        margin: 0;
+    }
 
-        & .titleTextContainer {
-            width: 620px;
-        }
+    & #developer {
+        grid-area: 2 / span 2;
+    }
 
-        & h2 {
-            font-size: 52px;
-            margin: 0;
-        }
-
-        & #tabSpace {
-            margin-left: 200px;
-        }
-
-
+    & p {
+        grid-area: 3 / span 2;
     }
 }
 
