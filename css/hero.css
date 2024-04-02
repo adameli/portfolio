@@ -1,0 +1,74 @@
+#hero {
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.heroContentWrapper {
+    font-family: "Roboto";
+    width: 100%;
+}
+
+.grid-2-columns {
+    display: grid;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.headshot-container {
+    width: 400px;
+    position: relative;
+
+}
+
+.headshot-container img {
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+#introduction-container {
+    max-width: 546px;
+}
+
+#introduction-about {
+    max-width: 342px;
+    justify-self: end;
+}
+
+.title-text-container {
+    width: 100%;
+
+    & h4 {
+        font-size: 20px;
+
+    }
+
+    & h2 {
+        font-size: 76px;
+        margin: 0;
+
+        & span {
+            color: var(--purple);
+        }
+    }
+}
+
+#scroll-down-btn {
+    height: 80px;
+    width: 80px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: '</>';
+        font-size: 24px;
+
+    }
+}

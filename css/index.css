@@ -11,7 +11,7 @@
 :root {
     --white: #FFFFFF;
     --background-grey: #ddd;
-    --background-white: #f3f3f3;
+    --background-white: #1b1f24;
     --black: #000000;
     --light-grey: #E0E0E0;
     --grey: #B6BAC3;
@@ -30,13 +30,13 @@ body {
     margin: 0;
     background: var(--background-white);
     /* font-size: 1.25rem; */
-    color: var(--black);
+    color: var(--white);
     position: relative;
 }
 
 .container {
     width: 100%;
-    max-width: 1416px;
+    max-width: 1268px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 2em;
@@ -65,64 +65,7 @@ header {
     }
 }
 
-#hero {
-    height: 100vh;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-}
 
-
-.heroContentWrapper {
-    font-family: "Roboto";
-    width: 100%;
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-}
-
-.headshot-container {
-    width: 400px;
-    position: relative;
-
-}
-
-.headshot-container img {
-    width: 100%;
-    object-fit: cover;
-    object-position: right;
-}
-
-.introduction-container {
-    flex-grow: 1;
-}
-
-.title-text-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-
-    & h4 {
-        font-size: 20px;
-
-        & span {
-            color: var(--purple);
-        }
-    }
-
-    & h2 {
-        font-size: 62px;
-        margin: 0;
-    }
-
-    & #developer {
-        grid-area: 2 / span 2;
-    }
-
-    & p {
-        grid-area: 3 / span 2;
-    }
-}
 
 figure {
     margin: 0;
@@ -146,7 +89,7 @@ figure {
 .scroller {
     font-family: "Roboto";
     background-color: var(--black);
-    border-radius: var(--border-radius);
+    /* border-radius: var(--border-radius); */
     padding-block: .75rem;
     overflow: hidden;
 
@@ -443,26 +386,10 @@ figure {
 
 .cross {
     position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     width: 100px;
     height: 100px;
     background-image: url("../resources/cros.png");
     background-size: cover;
-
-    /* Change the color to your preferred color */
-
-    /* & #upLeft {
-        border-right: var(--border-thic) solid var(--white);
-        border-bottom: var(--border-thic) solid var(--white);
-    }
-
-    & #dwRight {
-        border-left: var(--border-thic) solid var(--white);
-        border-top: var(--border-thic) solid var(--white);
-        grid-area: 2 / 2;
-    } */
 }
 
 .upRight {

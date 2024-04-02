@@ -1,0 +1,17 @@
+#skills-container {
+    display: flex;
+}
+
+.skill-box {
+
+    background-color: #2d343f;
+    border-radius: 30px;
+    padding: 124px 52px 100px;
+
+    & img {
+        object-fit: contain;
+        height: 50px;
+        width: 50px;
+        object-position: center;
+    }
+}
