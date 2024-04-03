@@ -1,0 +1,56 @@
+#about {
+    height: 100vh;
+    background-color: var(--grey-black);
+}
+
+.aboutWrapper {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "Roboto";
+}
+
+
+
+#headshot {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#headshot-container {
+    max-width: 546px;
+}
+
+#about-text {
+    max-width: 342px;
+    justify-self: center;
+}
+
+
+.cross {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url("../resources/cros.png");
+    background-size: cover;
+}
+
+.upRight {
+    top: var(--cross-pos);
+    right: var(--cross-pos);
+    /* transform: rotate(45deg); */
+}
+
+.dwRight {
+    bottom: var(--cross-pos);
+    right: var(--cross-pos);
+}
+
+.dwLeft {
+    bottom: var(--cross-pos);
+    left: var(--cross-pos);
+}

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/hero.css">
     <link rel="stylesheet" href="./css/skills.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/about.css">
     <title>Adam Eliasson Webbdeveloper</title>
 </head>
 
@@ -30,23 +32,20 @@
             <div id="introduction-container">
                 <div class="title-text-container">
                     <h2>I'm <span>Adam</span> a,<br>Web Developer</h2>
-                    <p>Currently, I am enrolled in the Media Technology Web-Based Design <br> and Development program at
-                        Malmö University.</p>
                 </div>
                 <div id="scroll-down-btn"></div>
             </div>
 
             <div id="introduction-about">
                 <h2>ABOUT ME</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora a dignissimos perferendis delectus
-                    magnam, eligendi velit natus ratione, vel inventore aliquid, ea laborum at odit earum sapiente hic
-                    consequuntur et.</p>
+                <p>Currently, I am enrolled in the Media Technology Web-Based Design and Development program at
+                    Malmö University.</p>
                 <button>Learn more</button>
             </div>
         </div>
     </section>
 
-    <div class="scroller">
+    <!-- <div class="scroller">
         <ul class="innerScroller">
             <li>ERROR DEBUGG REPEAT</li>
             <li>ERROR DEBUGG REPEAT</li>
@@ -55,44 +54,48 @@
             <li>ERROR DEBUGG REPEAT</li>
             <li>ERROR DEBUGG REPEAT</li>
         </ul>
-    </div>
-    <section id="skills" class="container">
-        <div id="skills-container">
-            <div class="skill-box">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                <h3>Javascript</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
-                <figure class="white-line-figure" id="line-skill-box"></figure>
+    </div> -->
+    <section id="skills" class="scroller">
+        <div class="container">
+            <h1 class="sectionTitle"><span>/</span> My Skills</h1>
+            <div id="skills-container" class="innerScroller">
+                <div class="skill-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                    <h3>Javascript</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                    <div class="white-line-figure" id="line-skill-box"></div>
+                </div>
+                <div class="skill-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
+                    <h3>HTML</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                    <div class="white-line-figure" id="line-skill-box"></div>
+                </div>
+                <div class="skill-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
+                    <h3>CSS</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                    <div class="white-line-figure" id="line-skill-box"></div>
+                </div>
+                <div class="skill-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+                    <h3>PHP</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                    <div class="white-line-figure" id="line-skill-box"></div>
+                </div>
+                <div class="skill-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+                    <h3>C#</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                    <div class="white-line-figure" id="line-skill-box"></div>
+                </div>
             </div>
-            <div class="skill-box">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
-                <h3>HTML</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
-                <figure class="white-line-figure" id="line-skill-box"></figure>
-            </div>
-            <div class="skill-box">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
-                <h3>CSS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
-                <figure class="white-line-figure" id="line-skill-box"></figure>
-            </div>
-            <div class="skill-box">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
-                <h3>PHP</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
-                <figure class="white-line-figure" id="line-skill-box"></figure>
-            </div>
-            <div class="skill-box">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
-                <h3>C#</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
-                <figure class="white-line-figure" id="line-skill-box"></figure>
-            </div>
+
         </div>
     </section>
 
     <section id="projects" class="container">
-        <h1 class="sectionTitle">Projects</h1>
+        <h1 class="sectionTitle"><span>/</span> Projects</h1>
         <div class="projectGrid">
             <div class="projectBox" id="classcode">
                 <img src="resources/classcode.png" alt="">
@@ -149,18 +152,18 @@
         </div>
     </section>
 
-    <section id="about" class="container">
-        <div class="aboutWrapper">
-
-
-            <div class="cross upRight"></div>
+    <section id="about">
+        <div class="container">
+            <h1 class="sectionTitle"><span>/</span> About me</h1>
+            <!-- <div class="cross upRight"></div>
             <div class="cross dwRight"></div>
-            <div class="cross dwLeft"></div>
-            <h1>About me</h1>
-            <div class="gridContainer">
-                <img src="resources/DSC_6493.JPG" alt="" id="headshot">
-                <div class="gridBox aboutText">
-                    <h3>Who i'm I</h3>
+            <div class="cross dwLeft"></div> -->
+            <div class="grid-2-columns">
+                <div id="headshot-container">
+                    <img src="resources/DSC_6493.JPG" alt="" id="headshot">
+                </div>
+                <div id="about-text">
+                    <h3>Who am I</h3>
                     <p>Currently, I am enrolled in the Media Technology Web-Based Design and Development program at
                         Malmö
                         University. By graduation 2025 i’ll be equipped with a comprehensive skill set in web
@@ -168,14 +171,6 @@
                         and design. I am eager to leverage my newly acquired skills in the dynamic and competitive work
                         market.</p>
                 </div>
-                <div class="gridBox skills">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
-                </div>
-                <div class="gridBox "></div>
             </div>
         </div>
     </section>

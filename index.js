@@ -23,15 +23,7 @@
 
 // changeFigure(figureArray[2])
 
-let chape = 0
-// setInterval(() => {
-//     changeFigure(figureArray[chape])
-//     chape++
 
-//     if (chape === figureArray.length) {
-//         chape = 0;
-//     }
-// }, 2000);
 
 const scrollerInner = document.querySelector(".innerScroller");
 const scrollerContent = Array.from(scrollerInner.children);
