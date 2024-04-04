@@ -26,6 +26,15 @@ document.getElementById("navAbout").addEventListener("click", (e) => {
 
 })
 
+document.getElementById("learn-more-about").addEventListener("click", (e) => {
+    window.scroll({
+        top: document.getElementById('about').offsetTop,
+        left: 100,
+        behavior: "smooth",
+    });
+
+})
+
 const heroWrapper = document.querySelector('.heroContentWrapper');
 const projectBoxes = document.querySelectorAll('.projectBox');
 
@@ -45,20 +54,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, {
     // threshold: .5,
-    rootMargin: '200px'
+    rootMargin: '100px'
 });
 
 observer.observe(heroWrapper);
 projectBoxes.forEach(box => observer.observe(box));
 
-// window.addEventListener("scroll", (e) => {
-//     console.log(window.pageYOffset);
-//     let projectsScroll = document.getElementById('projects').offsetTop
-//     console.log(projectsScroll);
-//     if (window.screenTop > projectsScroll) {
-//         console.log("yes");
-//     }
-// })
 
 // window.addEventListener("scroll", setScrollVar)
 // window.addEventListener("resize", setScrollVar)

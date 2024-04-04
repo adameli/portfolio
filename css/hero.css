@@ -35,7 +35,32 @@
 #introduction-about {
     max-width: 342px;
     justify-self: end;
+
+    & p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+    }
+
+    & .linkup-container {
+        margin-top: 40px;
+
+    }
 }
+
+#linkup-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & .linkup-icon {
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+
 
 .title-text-container {
     width: 100%;
@@ -62,6 +87,11 @@
     padding-bottom: 5px;
     color: var(--white);
     font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--purple);
+    }
 }
 
 .scroll-down-btn {
@@ -74,13 +104,30 @@
     align-items: center;
 
     &::before {
-        content: '</>';
+        content: '';
         font-size: 24px;
+        background-image: url('../resources/icons8-arrow-down-60.png');
+        background-size: cover;
+        height: 30px;
+        width: 30px;
+        animation: arrow-down 2s ease-in-out infinite;
+    }
+}
 
+
+@keyframes arrow-down {
+    20% {
+        transform: translateY(-15px);
     }
 
+    40% {
 
+        transform: translateY(15px);
+    }
 }
+
+
+
 
 .show {
     opacity: 1;
