@@ -1,0 +1,88 @@
+#hero {
+    display: flex;
+    align-items: center;
+    padding-top: 20vh;
+    padding-bottom: 30vh;
+}
+
+.heroContentWrapper {
+    font-family: "Roboto";
+    width: 100%;
+    transform: translateY(300px);
+    opacity: 0;
+
+    transition: transform 1s, opacity 2s;
+}
+
+.headshot-container img {
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+#line-hero {
+    width: 25%;
+    height: 7px;
+}
+
+#introduction-container {
+    max-width: 546px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#introduction-about {
+    max-width: 342px;
+    justify-self: end;
+}
+
+.title-text-container {
+    width: 100%;
+
+    & h4 {
+        font-size: 20px;
+
+    }
+
+    & h1 {
+        font-size: clamp(3.8rem, 6vw, 4.75rem);
+        margin: 0;
+
+        & span {
+            color: var(--purple);
+        }
+    }
+}
+
+#learn-more-about {
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--card);
+    padding-bottom: 5px;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.scroll-down-btn {
+    height: 80px;
+    width: 80px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: '</>';
+        font-size: 24px;
+
+    }
+
+
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}

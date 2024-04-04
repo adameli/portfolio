@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Regular.ttf");
+}
+
+@font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Regular.ttf");
 }
@@ -11,13 +16,126 @@
 :root {
     --white: #FFFFFF;
     --background-grey: #ddd;
+    --background-white: #1b1f24;
     --black: #000000;
     --light-grey: #E0E0E0;
-    --grey: #B6BAC3;
+    --grey-black: rgba(45, 52, 63, 0.4);
     --purple: #5F49F2;
+    --card: #2d343f;
 
     --border-radius: 10px;
     --sectionTitle: 35px;
     --border-thic: 2px;
     --cross-pos: 30px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background-white);
+    /* font-size: 1.25rem; */
+    color: var(--white);
+    position: relative;
+    font-family: "Roboto";
+}
+
+p {
+    line-height: 1.6em;
+}
+
+section {
+    padding-block: 100px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1368px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.grid-2-columns {
+    display: grid;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 28px;
+    grid-template-rows: auto;
+}
+
+/*__________________Landing page*/
+
+
+#menu {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 40px;
+
+    font-size: 18px;
+
+    & .menuContainer {
+        display: flex;
+        gap: 2rem;
+
+        &>*:hover {
+            cursor: pointer;
+            color: var(--purple);
+        }
+    }
+}
+
+
+.white-line-figure {
+    background-color: var(--white);
+}
+
+
+
+/*______________________Projects*/
+
+.sectionTitle {
+    font-size: var(--sectionTitle);
+    width: fit-content;
+    margin-top: 0;
+
+    & span {
+        color: var(--purple);
+    }
+}
+
+.subTitle {
+    font-size: 26px;
+    width: fit-content;
+    margin-top: 0;
+
+    & span {
+        color: var(--purple);
+    }
+}
+
+
+.projectBox {
+    animation: fade-in linear;
+    /* animation-timeline: view(100px); */
+    animation-range: cover;
+
+}
+
+@keyframes fade-in {
+    from {
+        scale: .8;
+        opacity: 0;
+    }
+
+    to {
+        scale: 1;
+        opacity: 1;
+    }
 }

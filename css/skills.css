@@ -1,0 +1,66 @@
+#skills {
+    background-color: var(--grey-black);
+}
+
+
+#skills-title {
+    font-size: 24px;
+}
+
+.skill-box {
+
+    background-color: var(--card);
+    border-radius: 30px;
+    padding: 124px 52px 100px;
+    max-width: 400px;
+
+    & img {
+        object-fit: contain;
+        height: 60px;
+        width: 60px;
+        object-position: center;
+    }
+
+    & h3 {
+        font-size: 32px;
+    }
+
+    & p {
+        font-size: 20px;
+    }
+}
+
+#skills-container {
+    position: relative;
+}
+
+#invisable-skill-box {
+    opacity: 0;
+}
+
+.scroller {
+    font-family: "Roboto";
+    overflow: hidden;
+
+    & .innerScroller {
+        position: absolute;
+        display: flex;
+        padding-left: 0;
+        width: max-content;
+        gap: 1rem;
+        top: 0;
+        left: -300px;
+        animation: scroll 20s linear infinite;
+    }
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+#line-skill-box {
+    width: 30%;
+    height: 7px;
+}

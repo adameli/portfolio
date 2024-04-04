@@ -6,12 +6,188 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
-    <title>Adam Eliasson Webbdeveloper</title>
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/skills.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <title>Adam Eliasson Webdeveloper</title>
 </head>
 
 <body>
 
+    <header>
+        <div id="menu" class="container">
+            <h3>Adam Eliasson</h3>
+            <div class="menuContainer">
+                <h4 id="navProject">Projects</h4>
+                <h4 id="navAbout">About</h4>
+                <h4>Contact</h4>
+            </div>
 
+        </div>
+    </header>
+
+    <section id="hero" class="container">
+        <div data-id="hero" class="heroContentWrapper grid-2-columns">
+            <!-- <div class="headshot-container">
+                <img src="resources/img.png" alt="">
+            </div> -->
+            <div id="introduction-container">
+                <div class="white-line-figure" id="line-hero"></div>
+                <div class="title-text-container">
+                    <h1>I'm <span>Adam</span> a,<br>Web Developer</h1>
+                </div>
+                <div class="scroll-down-btn"></div>
+            </div>
+
+            <div id="introduction-about">
+                <h2 class="subTitle"><span>/</span> ABOUT ME</h2>
+                <p>Adventurous 24-year-old who loves taking on new challenges and gaining new experiences.
+                    Positive, team player, and curious are three good words that describe me and my work
+                    style.</p>
+                <button id="learn-more-about">Learn more</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="scroller">
+        <div class="container">
+            <h1 class="sectionTitle"><span>/</span> My Skills</h1>
+            <div id="skills-container">
+                <div id="invisable-skill-box" class="skill-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                    <h3>Javascript</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                    <div class="white-line-figure" id="line-skill-box"></div>
+                </div>
+                <div class="innerScroller">
+                    <div class="skill-box">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                        <h3>Javascript</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                        <div class="white-line-figure" id="line-skill-box"></div>
+                    </div>
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
+                        <h3>HTML</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                        <div class="white-line-figure" id="line-skill-box"></div>
+                    </div>
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
+                        <h3>CSS</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                        <div class="white-line-figure" id="line-skill-box"></div>
+                    </div>
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+                        <h3>PHP</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                        <div class="white-line-figure" id="line-skill-box"></div>
+                    </div>
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+                        <h3>C#</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
+                        <div class="white-line-figure" id="line-skill-box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h1 class="sectionTitle"><span>/</span> Projects</h1>
+        <div class="projectGrid">
+            <div data-id="project" class="projectBox" id="classcode">
+                <a href="https://wdu.maumt.se/ht22/bed_bird/ClassCode/" target="_blank">
+                    <img src="resources/classcode.png" alt="">
+                    <div class="projectInfo">
+                        <ul class="tags">
+                            <li>Development</li>
+                            <li>Algoritms</li>
+                            <li>Team</li>
+                            <li>Website</li>
+                        </ul>
+                        <p class="project-box-title">ClassCode</p>
+                </a>
+            </div>
+        </div>
+        <div data-id="project" class="projectBox" id="connectfour">
+            <a href="https://adameli.github.io/connectfour/" target="_blank">
+                <img src="resources/connect-four.png" alt="">
+                <div class="projectInfo">
+                    <ul class="tags">
+                        <li>Development</li>
+                        <li>Algoritms</li>
+                        <li>Game</li>
+                    </ul>
+                    <p class="project-box-title">Connect Four</p>
+            </a>
+        </div>
+        </div>
+        <div data-id="project" class="projectBox" id="vemkanmest">
+            <a href="http://www.maumt.se/wdu/ht22/students/designstudio/case_4/index.html" target="_blank">
+                <img src="resources/vem-kan-mest-side.jpg" alt="">
+                <div class="projectInfo">
+                    <ul class="tags">
+                        <li>Development</li>
+                        <li>Game</li>
+                        <li>Team</li>
+                        <li>Figma</li>
+                    </ul>
+                    <p class="project-box-title">Vem kan mest?</p>
+            </a>
+        </div>
+        </div>
+        <div data-id="project" class="projectBox">
+            <a href="https://sydstil.se/" target="_blank">
+                <img src="resources/Skärmbild 2024-02-14 142523.png" alt="">
+                <div class="projectInfo">
+                    <ul class="tags">
+                        <li>Development</li>
+                        <li>UI</li>
+                        <li>Business</li>
+                    </ul>
+                    <p class="project-box-title">Syd Stil</p>
+            </a>
+        </div>
+        <!-- <div class="projectLink">
+                    <a href="#">See this project</a>
+                </div> -->
+        </div>
+
+
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h1 class="sectionTitle"><span>/</span> About me</h1>
+            <div class="grid-2-columns">
+                <div id="headshot-container">
+                    <img src="resources/DSC_6493.JPG" alt="" id="headshot">
+                </div>
+                <div id="about-text">
+                    <h2 class="subTitle"><span>/</span> Me and my code journey</h2>
+                    <p>
+                        Adventurous 24-year-old who loves taking on new challenges and gaining new experiences.
+                        Positive, team player, and curious are three good words that describe me and my work
+                        style.<br><br>Since August 2022, I've been enrolled in the Media Technology Web-Based Design and
+                        Development
+                        program at Malmö University. With no prior coding experience, I initially found the journey
+                        daunting. However, through persistent effort and determination, I gradually developed a passion
+                        for coding and problem-solving.<br><br>Over the past two years, I've learned a great deal,
+                        though I
+                        recognize there's still much more
+                        to discover. I'm eager to tackle real-world business projects and coding challenges. By my
+                        expected graduation in 2025, I aim to have a solid skill set in web development and design,
+                        ready to apply in the competitive job market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="./index.js"></script>
 </body>
