@@ -1,5 +1,4 @@
 #about {
-    height: 100vh;
     background-color: var(--grey-black);
 }
 
@@ -12,11 +11,9 @@
     font-family: "Roboto";
 }
 
-
-
 #headshot {
     width: 100%;
-    height: 500px;
+    max-height: 600px;
     object-fit: cover;
     object-position: center;
 }
@@ -26,8 +23,16 @@
 }
 
 #about-text {
-    max-width: 342px;
-    justify-self: center;
+    max-width: 520px;
+    justify-self: end;
+
+    & h1 {
+        padding-top: 0;
+    }
+
+    & p {
+        font-size: clamp(.87rem, 1vw, 1.18rem);
+    }
 }
 
 

@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Regular.ttf");
+}
+
+@font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Regular.ttf");
 }
@@ -35,31 +40,49 @@ body {
     /* font-size: 1.25rem; */
     color: var(--white);
     position: relative;
+    font-family: "Roboto";
+}
+
+p {
+    line-height: 1.6em;
+}
+
+section {
+    padding-block: 100px;
 }
 
 .container {
     width: 100%;
-    max-width: 1268px;
+    max-width: 1368px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 2em;
     padding-right: 2em;
 }
 
+.grid-2-columns {
+    display: grid;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 28px;
+    grid-template-rows: auto;
+}
+
 /*__________________Landing page*/
-header {
-    position: absolute;
-    width: 100%;
+
+
+#menu {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    padding: 0 6vw;
-    border-bottom: 2px solid var(--grey);
-    font-family: "Space Mono";
+    padding-block: 40px;
+
+    font-size: 18px;
 
     & .menuContainer {
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
 
         &>*:hover {
             cursor: pointer;
@@ -74,42 +97,21 @@ header {
 }
 
 
-/*__________________Scroller bar*/
-/* .scroller {
-    font-family: "Roboto";
-    background-color: var(--black);
-    border-radius: var(--border-radius);
-    padding-block: .75rem;
-    overflow: hidden;
-
-    & .innerScroller {
-        display: flex;
-        padding-left: 0;
-        width: max-content;
-        gap: 1rem;
-        animation: scroll 20s linear infinite;
-    }
-
-    & li {
-        font-size: 30px;
-        list-style: none;
-        color: var(--white);
-        flex-shrink: 0;
-    }
-
-    & li:nth-child(odd) {
-        color: var(--purple);
-    }
-} */
-
-
 
 /*______________________Projects*/
 
 .sectionTitle {
     font-size: var(--sectionTitle);
-    font-family: "Roboto";
-    padding-top: 100px;
+    width: fit-content;
+    margin-top: 0;
+
+    & span {
+        color: var(--purple);
+    }
+}
+
+.subTitle {
+    font-size: 26px;
     width: fit-content;
     margin-top: 0;
 

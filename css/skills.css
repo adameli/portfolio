@@ -2,15 +2,9 @@
     background-color: var(--grey-black);
 }
 
-#skills-container {
-    display: flex;
-    gap: 20px;
-    padding-bottom: 120px;
-}
 
 #skills-title {
     font-size: 24px;
-    padding-top: 100px;
 }
 
 .skill-box {
@@ -36,17 +30,27 @@
     }
 }
 
+#skills-container {
+    position: relative;
+}
+
+#invisable-skill-box {
+    opacity: 0;
+}
+
 .scroller {
     font-family: "Roboto";
-    padding-block: .75rem;
     overflow: hidden;
 
     & .innerScroller {
+        position: absolute;
         display: flex;
         padding-left: 0;
         width: max-content;
         gap: 1rem;
-        /* animation: scroll 20s linear infinite; */
+        top: 0;
+        left: -300px;
+        animation: scroll 20s linear infinite;
     }
 }
 

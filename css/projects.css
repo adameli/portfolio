@@ -1,12 +1,11 @@
 .projectGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(28rem, 100%), 1fr));
     grid-column-gap: 4rem;
     grid-row-gap: 2rem;
     /* height: 800px; */
     font-family: "Roboto";
     color: var(--white);
-    padding-bottom: 100px;
 
     & .projectBox {
         display: grid;
@@ -16,14 +15,12 @@
         border-radius: var(--border-radius);
         background-color: var(--card);
 
-        & .projectInfo {
-            padding: 15px 30px 0 30px;
+        & a:visited {
+            color: var(--card);
         }
 
-        & .projectLink {
-            display: flex;
-            align-items: end;
-            padding: 0 20px 15px 20px;
+        & .projectInfo {
+            padding: 15px 30px 0 30px;
         }
 
         & img {
@@ -36,9 +33,12 @@
         }
 
         & .tags {
+            color: var(--white);
+            text-decoration: none;
             display: flex;
             gap: .5rem;
             padding-left: 0;
+            margin-block: 1vw;
 
             & li {
                 list-style: none;
@@ -46,19 +46,20 @@
                 /* background-color: #383838; */
                 border: 1px solid #676767;
                 border-radius: calc(var(--border-radius) - 5px);
-                font-size: 14px;
+                font-size: clamp(.7rem, 1vw, .875rem);
             }
         }
 
-        & a {
+        & .project-box-title {
             color: var(--white);
             text-decoration: none;
             position: relative;
             margin: 0;
-            font-size: 26px;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
             letter-spacing: 1px;
-            position: relative;
             width: fit-content;
+            display: flex;
+            align-items: center;
 
             &::after {
                 content: '';
@@ -68,56 +69,45 @@
                 height: 15px;
                 width: 15px;
                 position: absolute;
-                top: 9px;
+                /* top: 15px; */
                 right: -25px;
             }
         }
     }
 }
 
-.projectBoxGrid {
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    max-height: 450px;
-    border-radius: var(--border-radius);
-    background-color: #303030;
+.projectBox:nth-child(1) {
+    transform: translateX(-200px);
+    opacity: 0;
 
-    & img {
-        width: 100%;
-        border-radius: var(--border-radius) var(--border-radius) 0 0;
-        object-fit: cover;
-    }
+    transition: transform 1s, opacity 2s;
+}
 
-    & h3 {
-        margin: 0;
-    }
+.projectBox:nth-child(2) {
+    transform: translateX(-200px);
+    opacity: 0;
 
-    & .tags {
-        display: flex;
-        gap: .5rem;
-        padding-left: 0;
+    transition: transform 1s, opacity 2s;
+    transition-delay: .5s;
+}
 
-        & li {
-            list-style: none;
-            padding: 5px 10px;
-            background-color: #383838;
-            border-radius: calc(var(--border-radius) - 5px);
-            font-size: 12px;
-        }
-    }
+.projectBox:nth-child(3) {
+    transform: translateX(-200px);
+    opacity: 0;
 
-    & .projectInfo {
-        padding: 15px 20px 0 20px;
-    }
+    transition: transform 1s, opacity 2s;
+    transition-delay: 1s;
+}
 
-    & .projectLink {
-        display: flex;
-        align-items: end;
-        padding: 0 20px 15px 20px;
-    }
+.projectBox:nth-child(4) {
+    transform: translateX(-200px);
+    opacity: 0;
 
-    & a {
-        color: var(--white);
-        text-decoration: none;
-    }
+    transition: transform 1s, opacity 2s;
+    transition-delay: 1.5s;
+}
+
+.show-projects {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
 }

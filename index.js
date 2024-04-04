@@ -1,30 +1,5 @@
 "use strict"
 
-// const dotsFigure = document.querySelector("figure");
-// const figureArray = [[14, 13, 22, 31, 41, 51, 61, 72, 83, 84, 85, 86, 77, 68, 58, 48, 38, 27, 16, 15], [14, 13, 12, 11, 21, 31, 41, 51, 61, 71, 81, 82, 83, 84, 85, 86, 87, 88, 78, 68, 58, 48, 38, 28, 18, 17, 16, 15], [3, 4, 5, 6, 16, 26, 36, 37, 38, 39, 49, 59, 69, 68, 67, 66, 76, 86, 96, 95, 94, 93, 83, 73, 63, 62, 61, 60, 50, 40, 30, 31, 32, 33, 23, 13]];
-
-// for (let i = 0; i <= 100; i++) {
-//     let dot = document.createElement("div");
-//     dot.id = i;
-//     dot.classList.add("dot")
-//     dotsFigure.append(dot)
-// }
-
-// function changeFigure(numbers) {
-//     let dots = Array.from(document.querySelectorAll(".dot"));
-//     dots.forEach(dot => {
-//         if (numbers.includes(parseInt(dot.id))) {
-//             dot.style.backgroundColor = "#5F49F2";
-//         } else {
-//             dot.style.backgroundColor = "#FFFFFF";
-//         }
-//     })
-// }
-
-// changeFigure(figureArray[2])
-
-
-
 const scrollerInner = document.querySelector(".innerScroller");
 const scrollerContent = Array.from(scrollerInner.children);
 
@@ -51,6 +26,31 @@ document.getElementById("navAbout").addEventListener("click", (e) => {
 
 })
 
+const heroWrapper = document.querySelector('.heroContentWrapper');
+const projectBoxes = document.querySelectorAll('.projectBox');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const dataset = entry.target.dataset.id;
+        console.log(entry.target.dataset.id);
+        if (entry.intersectionRatio <= 0) return
+        switch (dataset) {
+            case 'hero':
+                entry.target.classList.add('show');
+                break;
+            case 'project':
+                entry.target.classList.add('show-projects');
+                break;
+        }
+    });
+}, {
+    // threshold: .5,
+    rootMargin: '200px'
+});
+
+observer.observe(heroWrapper);
+projectBoxes.forEach(box => observer.observe(box));
+
 // window.addEventListener("scroll", (e) => {
 //     console.log(window.pageYOffset);
 //     let projectsScroll = document.getElementById('projects').offsetTop
@@ -60,8 +60,8 @@ document.getElementById("navAbout").addEventListener("click", (e) => {
 //     }
 // })
 
-window.addEventListener("scroll", setScrollVar)
-window.addEventListener("resize", setScrollVar)
+// window.addEventListener("scroll", setScrollVar)
+// window.addEventListener("resize", setScrollVar)
 
 function setScrollVar() {
     const htmlElement = document.documentElement;
@@ -70,4 +70,4 @@ function setScrollVar() {
     htmlElement.style.setProperty("--scroll", Math.min(percentOfScreenHeightScrolled * 100, 100));
 }
 
-setScrollVar()
+// setScrollVar()
