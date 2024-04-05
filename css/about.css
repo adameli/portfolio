@@ -36,26 +36,13 @@
 }
 
 
-.cross {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-image: url("../resources/cros.png");
-    background-size: cover;
-}
+@media (max-width: 1023px) {
+    #about-text {
+        justify-self: center;
+        margin-top: 50px;
+    }
 
-.upRight {
-    top: var(--cross-pos);
-    right: var(--cross-pos);
-    /* transform: rotate(45deg); */
-}
-
-.dwRight {
-    bottom: var(--cross-pos);
-    right: var(--cross-pos);
-}
-
-.dwLeft {
-    bottom: var(--cross-pos);
-    left: var(--cross-pos);
+    #headshot-container {
+        justify-self: center;
+    }
 }

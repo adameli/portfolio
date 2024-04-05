@@ -62,5 +62,29 @@
 
 #line-skill-box {
     width: 30%;
-    height: 7px;
+    height: 5px;
+}
+
+@media (max-width: 600px) {
+
+    .skill-box {
+        padding: 104px 32px 80px;
+        max-width: 300px;
+
+        & img {
+
+            height: 50px;
+            width: 50px;
+
+        }
+
+        & h3 {
+            font-size: 26px;
+        }
+
+        & p {
+            font-size: 14px;
+        }
+    }
+
 }
