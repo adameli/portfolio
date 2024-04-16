@@ -91,6 +91,14 @@ section {
     }
 }
 
+footer {
+    margin-block: 100px;
+
+    & #linkup-icons-container {
+        flex-wrap: wrap;
+    }
+}
+
 
 .white-line-figure {
     background-color: var(--white);
@@ -156,6 +164,26 @@ section {
         font-size: clamp(1.5rem, 5vw, 2rem);
         width: fit-content;
 
+    }
+
+    #menu {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+
+        & h3 {
+            display: none;
+        }
+
+        & .menuContainer {
+            display: flex;
+            gap: 2rem;
+
+            &>*:hover {
+                cursor: pointer;
+                color: var(--purple);
+            }
+        }
     }
 
 

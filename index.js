@@ -35,6 +35,15 @@ document.getElementById("learn-more-about").addEventListener("click", (e) => {
 
 })
 
+document.getElementById("navContact").addEventListener("click", (e) => {
+    window.scroll({
+        top: document.getElementById('contact').offsetTop,
+        left: 100,
+        behavior: "smooth",
+    });
+
+})
+
 const heroWrapper = document.querySelector('.heroContentWrapper');
 const projectBoxes = document.querySelectorAll('.projectBox');
 
@@ -72,3 +81,4 @@ function setScrollVar() {
 }
 
 // setScrollVar()
+
