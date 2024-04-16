@@ -138,6 +138,7 @@
     }
 
     #introduction-about {
+        justify-self: start;
 
         & h2 {
             font-size: clamp(1.25rem, 4.2vw, 4.75rem);

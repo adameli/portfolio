@@ -43,7 +43,7 @@
     }
 
     & p {
-        font-size: clamp(.87rem, 1vw, 1.18rem);
+        font-size: clamp(1rem, 1vw, 1.18rem);
     }
 }
 
