@@ -46,6 +46,7 @@ document.getElementById("navContact").addEventListener("click", (e) => {
 
 const heroWrapper = document.querySelector('.heroContentWrapper');
 const projectBoxes = document.querySelectorAll('.projectBox');
+const aboutContent = document.querySelectorAll('.about-content');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -59,6 +60,9 @@ const observer = new IntersectionObserver((entries) => {
             case 'project':
                 entry.target.classList.add('show-projects');
                 break;
+            case 'about':
+                entry.target.classList.add('show-about-content');
+                break;
         }
     });
 }, {
@@ -68,6 +72,7 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(heroWrapper);
 projectBoxes.forEach(box => observer.observe(box));
+aboutContent.forEach(content => observer.observe(content));
 
 
 // window.addEventListener("scroll", setScrollVar)

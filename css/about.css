@@ -16,15 +16,27 @@
     max-height: 600px;
     object-fit: cover;
     object-position: center;
+
 }
 
 #headshot-container {
     max-width: 546px;
+    transform: translateX(-200px);
+    opacity: 0;
+
+    transition: transform 1s, opacity 2s;
+    transition-delay: .8s;
 }
 
 #about-text {
     max-width: 520px;
     justify-self: end;
+
+    transform: translateX(200px);
+    opacity: 0;
+
+    transition: transform 1s, opacity 2s;
+    transition-delay: .5s;
 
     & h1 {
         padding-top: 0;
@@ -33,6 +45,11 @@
     & p {
         font-size: clamp(.87rem, 1vw, 1.18rem);
     }
+}
+
+.show-about-content {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
 }
 
 
