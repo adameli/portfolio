@@ -113,6 +113,14 @@
     transition-delay: 1.5s;
 }
 
+.projectBox:nth-child(5) {
+    transform: translateX(-200px);
+    opacity: 0;
+
+    transition: transform 1s, opacity 2s;
+    transition-delay: 2s;
+}
+
 .show-projects {
     transform: translateX(0) !important;
     opacity: 1 !important;
