@@ -45,7 +45,6 @@ const aboutContent = document.querySelectorAll('.about-content');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         const dataset = entry.target.dataset.id;
-        console.log(entry.target.dataset.id);
         if (entry.intersectionRatio <= 0) return
         switch (dataset) {
             case 'hero':
