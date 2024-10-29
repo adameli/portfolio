@@ -1,12 +1,6 @@
 "use strict"
 
-const scrollerInner = document.querySelector(".innerScroller");
-const scrollerContent = Array.from(scrollerInner.children);
 
-scrollerContent.forEach(item => {
-    const duplicatedItem = item.cloneNode(true);
-    scrollerInner.appendChild(duplicatedItem);
-})
 
 
 document.getElementById("navProject").addEventListener("click", (e) => {
