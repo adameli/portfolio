@@ -32,10 +32,10 @@
     max-width: 520px;
     justify-self: end;
 
-    transform: translateX(200px);
+    /* transform: translateX(200px); */
     opacity: 0;
 
-    transition: transform 1s, opacity 2s;
+    transition: opacity 2s;
     transition-delay: .5s;
 
     & h1 {
