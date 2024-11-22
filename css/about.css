@@ -53,6 +53,30 @@
 }
 
 
+#ice-images-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+
+
+    & #ice-mini {
+        width: 200px;
+        top: 0;
+        left: 0;
+    }
+
+    & #ice-medium {
+        grid-area: 2 / 2;
+        width: 340px;
+    }
+
+    & #ice-big {
+        grid-area: 3 / 1;
+        width: 300px;
+    }
+}
+
 @media (max-width: 1023px) {
     #about-text {
         justify-self: center;
