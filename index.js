@@ -25,7 +25,7 @@ function windowSize() {
 
 
 
-document.getElementById("navProject").addEventListener("click", (e) => {
+document.getElementById("nav-project").addEventListener("click", (e) => {
     window.scroll({
         top: document.getElementById('projects').offsetTop,
         left: 100,
@@ -33,7 +33,7 @@ document.getElementById("navProject").addEventListener("click", (e) => {
     });
 
 })
-document.getElementById("navAbout").addEventListener("click", (e) => {
+document.getElementById("nav-about").addEventListener("click", (e) => {
     window.scroll({
         top: document.getElementById('about').offsetTop,
         left: 100,
@@ -42,26 +42,27 @@ document.getElementById("navAbout").addEventListener("click", (e) => {
 
 })
 
-document.getElementById("learn-more-about").addEventListener("click", (e) => {
-    window.scroll({
-        top: document.getElementById('about').offsetTop,
-        left: 100,
-        behavior: "smooth",
-    });
-
-})
-
-document.getElementById("navContact").addEventListener("click", (e) => {
+document.getElementById("nav-contact").addEventListener("click", (e) => {
     window.scroll({
         top: document.getElementById('contact').offsetTop,
         left: 100,
         behavior: "smooth",
     });
 
+    document.getElementById("learn-more-about").addEventListener("click", (e) => {
+        window.scroll({
+            top: document.getElementById('about').offsetTop,
+            left: 100,
+            behavior: "smooth",
+        });
+
+    })
+
+
 })
 
-const heroWrapper = document.querySelector('.heroContentWrapper');
-const projectBoxes = document.querySelectorAll('.projectBox');
+const heroWrapper = document.querySelector('.hero-content-container');
+const projectBoxes = document.querySelectorAll('.project-box');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

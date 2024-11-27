@@ -40,7 +40,7 @@ const skillsData = [
 
 
 
-const scrollerInner = document.querySelector('.innerScroller');
+const scrollerInner = document.querySelector('.inner-scroller');
 
 skillsData.forEach(object => {
     scrollerInner.innerHTML +=

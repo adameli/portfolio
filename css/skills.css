@@ -42,7 +42,7 @@
     font-family: "Roboto";
     overflow: hidden;
 
-    & .innerScroller {
+    & .inner-scroller {
         position: absolute;
         display: flex;
         padding-left: 0;

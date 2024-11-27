@@ -16,20 +16,21 @@
 
 <body>
 
-    <header>
-        <div id="menu" class="container">
-            <h3>Adam Eliasson</h3>
-            <div class="menuContainer">
-                <h4 id="navProject">Projects</h4>
-                <h4 id="navAbout">About</h4>
-                <h4 id="navContact">Contact</h4>
-            </div>
-
-        </div>
-    </header>
 
     <section id="hero" class="container">
-        <div data-id="hero" class="heroContentWrapper grid-2-columns">
+        <header>
+            <div id="menu">
+                <h3>Adam Eliasson</h3>
+                <div class="menu-container">
+                    <h4 id="nav-project">Projects</h4>
+                    <h4 id="nav-about">About</h4>
+                    <h4 id="nav-contact">Contact</h4>
+                </div>
+            </div>
+        </header>
+
+
+        <div data-id="hero" class="hero-content-container grid-2-columns">
             <div id="introduction-container">
                 <div class="white-line-figure" id="line-hero"></div>
                 <div class="title-text-container">
@@ -39,7 +40,7 @@
             </div>
 
             <div id="introduction-about">
-                <h2 class="subTitle"><span>/</span> ABOUT ME</h2>
+                <h2 class="sub-title"><span>/</span> ABOUT ME</h2>
                 <p>Adventurous 24-year-old who loves taking on new challenges and gaining new experiences.
                     Positive, team player, and curious are three good words that describe me and my work
                     style. <br>Since August 2022, I've been enrolled in the Media Technology Web-Based Design and
@@ -47,7 +48,7 @@
                     program at Malmö University</p>
                 <button id="learn-more-about">Learn more</button>
                 <div class="linkup-container">
-                    <h2 class="subTitle"><span>/</span> LINK UP</h2>
+                    <h2 class="sub-title"><span>/</span> LINK UP</h2>
                     <div id="linkup-icons-container">
                         <a href="https://github.com/adameli" target="_blank">
                             <img class="linkup-icon" src="./resources/icons8-github-24.png"></img>
@@ -67,7 +68,7 @@
 
     <section id="skills" class="scroller">
         <div class="container">
-            <h1 class="sectionTitle"><span>/</span> My Skills</h1>
+            <h1 class="section-title"><span>/</span> My Skills</h1>
             <div id="skills-container">
                 <div id="invisable-skill-box" class="skill-box">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
@@ -75,96 +76,14 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis molestiae </p>
                     <div class="white-line-figure" id="line-skill-box"></div>
                 </div>
-                <div class="innerScroller"></div>
+                <div class="inner-scroller"></div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="container">
-        <h1 class="sectionTitle"><span>/</span> Projects</h1>
-        <div class="projectGrid">
-            <div data-id="project" class="projectBox" id="classcode">
-                <a href="https://wdu.maumt.se/ht22/bed_bird/ClassCode/" target="_blank">
-                    <img src="resources/classcode.png" alt="">
-                    <div class="projectInfo">
-                        <ul class="tags">
-                            <li>Development</li>
-                            <li>Algoritms</li>
-                            <li>Team</li>
-                            <li>Website</li>
-                        </ul>
-                        <p class="project-box-title">ClassCode</p>
-                    </div>
-                </a>
-            </div>
-            <div data-id="project" class="projectBox" id="connectfour">
-                <a href="https://adameli.github.io/connectfour/" target="_blank">
-                    <img src="resources/connect-four.png" alt="">
-                    <div class="projectInfo">
-                        <ul class="tags">
-                            <li>Development</li>
-                            <li>Algoritms</li>
-                            <li>Game</li>
-                        </ul>
-                        <p class="project-box-title">Connect Four</p>
-                    </div>
-                </a>
-            </div>
-            <div data-id="project" class="projectBox" id="vemkanmest">
-                <a href="https://students.maumt.se/WDU22/wilma/vemkanmest/" target="_blank">
-                    <img src="resources/vem-kan-mest-side.jpg" alt="">
-                    <div class="projectInfo">
-                        <ul class="tags">
-                            <li>Development</li>
-                            <li>Game</li>
-                            <li>Team</li>
-                            <li>Figma</li>
-                        </ul>
-                        <p class="project-box-title">Vem kan mest?</p>
-                    </div>
-                </a>
-            </div>
-            <div data-id="project" class="projectBox">
-                <a href="https://sydstil.se/" target="_blank">
-                    <img src="resources/Skärmbild 2024-02-14 142523.png" alt="">
-                    <div class="projectInfo">
-                        <ul class="tags">
-                            <li>Development</li>
-                            <li>UI</li>
-                            <li>Business</li>
-                        </ul>
-                        <p class="project-box-title">Syd Stil</p>
-                    </div>
-                </a>
-            </div>
-            <div data-id="project" class="projectBox">
-                <a href="https://thardemo.com/app/visualisering/" target="_blank">
-                    <img src="resources/visualisering.jpg" alt="">
-                    <div class="projectInfo">
-                        <ul class="tags">
-                            <li>Development</li>
-                            <li>UI</li>
-                            <li>D3</li>
-                            <li>Data</li>
-                        </ul>
-                        <p class="project-box-title">Datavisualisering</p>
-                    </div>
-                </a>
-            </div>
-            <div data-id="project" class="projectBox">
-                <a href="https://students.maumt.se/WDU22/wilma/pasprang/" target="_blank">
-                    <img src="resources/pasprang.png" alt="">
-                    <div class="projectInfo">
-                        <ul class="tags">
-                            <li>Team</li>
-                            <li>UI</li>
-                            <li>Mobile</li>
-                            <li>Game</li>
-                        </ul>
-                        <p class="project-box-title">På Språng</p>
-                    </div>
-                </a>
-            </div>
+        <h1 class="section-title"><span>/</span> Projects</h1>
+        <div class="project-grid">
 
         </div>
     </section>
@@ -172,7 +91,7 @@
     <section id="hockey" class="container journey-container height">
         <div class=" sticky-container grid-2-columns">
             <div id="about-hockey" class="about-content">
-                <h2 class="subTitle"><span>/</span> What made me who i am Today</h2>
+                <h2 class="sub-title"><span>/</span> What made me who i am Today</h2>
                 <p>
                     Adventurous 24-year-old who loves taking on new challenges and gaining new experiences.
                     Positive, team player, and curious are three good words that describe me and my work
@@ -202,7 +121,7 @@
                 <img src="resources/meImages/militaryPro.png" class="image" id="mil-medium">
             </div>
             <div id="about-military" class="about-content">
-                <h2 class="subTitle"><span>/</span> From Boy To Man</h2>
+                <h2 class="sub-title"><span>/</span> From Boy To Man</h2>
                 <p>
                     Adventurous 24-year-old who loves taking on new challenges and gaining new experiences.
                     Positive, team player, and curious are three good words that describe me and my work
@@ -224,7 +143,7 @@
     <section class="container">
         <div class="grid-2-columns">
             <div id="about-text" class="about-content">
-                <h2 class="subTitle"><span>/</span> Me and my code journey</h2>
+                <h2 class="sub-title"><span>/</span> Me and my code journey</h2>
                 <p>
                     Adventurous 24-year-old who loves taking on new challenges and gaining new experiences.
                     Positive, team player, and curious are three good words that describe me and my work
@@ -249,7 +168,7 @@
 
     <footer id="contact">
         <div class="container">
-            <h2 class="subTitle"><span>/</span> LINK UP</h2>
+            <h2 class="sub-title"><span>/</span> LINK UP</h2>
             <div id="linkup-icons-container">
                 <a href="https://github.com/adameli" target="_blank">
                     <img class="linkup-icon" src="./resources/icons8-github-48.png"></img>
@@ -269,9 +188,9 @@
     </footer>
 
 
-    <script src="./index.js"></script>
-    <script src="./js/skills.js"></script>
     <script src="./js/projects.js"></script>
+    <script src="./js/skills.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

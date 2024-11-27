@@ -24,7 +24,7 @@
     --card: #2d343f;
 
     --border-radius: 10px;
-    --sectionTitle: 35px;
+    --section-title: 35px;
     --border-thic: 2px;
     --cross-pos: 30px;
 }
@@ -72,25 +72,6 @@ section {
 /*__________________Landing page*/
 
 
-#menu {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    padding-block: 40px;
-
-    font-size: 18px;
-
-    & .menuContainer {
-        display: flex;
-        gap: 2rem;
-
-        &>*:hover {
-            cursor: pointer;
-            color: var(--purple);
-        }
-    }
-}
-
 footer {
     margin-block: 100px;
 
@@ -108,8 +89,8 @@ footer {
 
 /*______________________Projects*/
 
-.sectionTitle {
-    font-size: var(--sectionTitle);
+.section-title {
+    font-size: var(--section-title);
     width: fit-content;
     margin-top: 0;
 
@@ -118,7 +99,7 @@ footer {
     }
 }
 
-.subTitle {
+.sub-title {
     font-size: 26px;
     width: fit-content;
     margin-top: 0;
@@ -182,7 +163,7 @@ footer {
         grid-row-gap: 50px;
     }
 
-    .sectionTitle {
+    .section-title {
         font-size: clamp(1.5rem, 5vw, 2rem);
         width: fit-content;
 

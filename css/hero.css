@@ -1,11 +1,35 @@
-#hero {
+section#hero {
     display: flex;
-    align-items: center;
-    padding-top: 20vh;
-    padding-bottom: 30vh;
+    flex-direction: column;
+    height: 100vh;
+    padding-block: 0;
 }
 
-.heroContentWrapper {
+header #menu {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 40px;
+
+    font-size: 18px;
+
+    & .menu-container {
+        display: flex;
+        gap: 2rem;
+
+        &>*:hover {
+            cursor: pointer;
+            color: var(--purple);
+        }
+    }
+}
+
+
+.hero-content-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-family: "Roboto";
     width: 100%;
     transform: translateY(300px);
@@ -62,7 +86,6 @@
 
 #introduction-about {
     max-width: 342px;
-    justify-self: end;
 
     & p {
         display: -webkit-box;
@@ -133,8 +156,12 @@
         }
     }
 
+    .hero-content-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
     #introduction-about {
-        justify-self: start;
 
         & h2 {
             font-size: clamp(1.25rem, 4.2vw, 4.75rem);
