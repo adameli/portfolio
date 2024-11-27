@@ -74,6 +74,16 @@ footer {
     & #linkup-icons-container {
         flex-wrap: wrap;
     }
+
+    & #gmail-tel {
+
+
+
+        & p,
+        h3 {
+            margin-block: 5px;
+        }
+    }
 }
 
 
