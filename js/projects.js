@@ -44,7 +44,7 @@ const projects = [
 ];
 
 const projectGrid = document.querySelector('.project-grid')
-console.log(projects[0].tags[0]);
+
 
 projects.forEach(project => {
     projectGrid.innerHTML += `

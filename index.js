@@ -3,10 +3,6 @@
 let isPhoneSize = false
 const journeyContainers = document.querySelectorAll('.journey-container')
 const stickeyContainers = document.querySelectorAll('.journey-container .grid-2-columns')
-console.log(journeyContainers);
-console.log(stickeyContainers);
-
-
 
 window.addEventListener("resize", windowSize)
 windowSize()
