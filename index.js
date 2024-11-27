@@ -49,15 +49,15 @@ document.getElementById("nav-contact").addEventListener("click", (e) => {
         behavior: "smooth",
     });
 
-    document.getElementById("learn-more-about").addEventListener("click", (e) => {
-        window.scroll({
-            top: document.getElementById('about').offsetTop,
-            left: 100,
-            behavior: "smooth",
-        });
 
-    })
+})
 
+document.getElementById("learn-more-about").addEventListener("click", (e) => {
+    window.scroll({
+        top: document.getElementById('hockey').offsetTop,
+        left: 100,
+        behavior: "smooth",
+    });
 
 })
 

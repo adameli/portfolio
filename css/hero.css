@@ -178,6 +178,7 @@ header #menu {
     .hero-content-container {
         flex-direction: column;
         justify-content: space-evenly;
+        align-items: start;
     }
 
     #introduction-about {
