@@ -35,7 +35,7 @@ document.getElementById("nav-project").addEventListener("click", (e) => {
 })
 document.getElementById("nav-about").addEventListener("click", (e) => {
     window.scroll({
-        top: document.getElementById('about').offsetTop,
+        top: document.getElementById('hockey').offsetTop,
         left: 100,
         behavior: "smooth",
     });

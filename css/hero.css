@@ -68,7 +68,7 @@ header #menu {
 
     &::before {
         content: '';
-        background-image: url('../resources/icons8-arrow-down-60.png');
+        background-image: url('../resources/icons/icons8-arrow-down-60.png');
         background-size: cover;
         height: 30px;
         width: 30px;
@@ -148,6 +148,25 @@ header #menu {
 }
 
 @media (max-width: 600px) {
+
+    header #menu {
+        justify-content: center;
+
+        & h3 {
+            display: none;
+        }
+
+        & .menuContainer {
+            display: flex;
+            gap: 2rem;
+
+            &>*:hover {
+                cursor: pointer;
+                color: var(--purple);
+            }
+        }
+    }
+
     .title-text-container {
 
         & h1 {

@@ -17,6 +17,9 @@
     border-radius: var(--border-radius);
     background-color: var(--card);
 
+    animation: fade-in linear;
+    animation-range: cover;
+
     &:hover {
         box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
             0 24px 46px var(--card);
@@ -71,7 +74,7 @@
         &::after {
             content: '';
             display: block;
-            background-image: url("../resources/open_in_new.png");
+            background-image: url("../resources/icons/open_in_new.png");
             background-size: cover;
             height: 15px;
             width: 15px;

@@ -27,7 +27,7 @@ const skillsData = [
         text: "Developing desktop and web-applications, leveraging its strong typing and extensive framework."
     },
     {
-        img: "./resources/d3.svg",
+        img: "./resources/skillsImages/d3.svg",
         language: "D3",
         text: "Visualizing data in captivating ways, from simple charts to interactive visualizations, unlocking insights and engaging audiences."
     },
