@@ -37,7 +37,6 @@
 body {
     margin: 0;
     background: var(--background-white);
-    /* font-size: 1.25rem; */
     color: var(--white);
     position: relative;
     font-family: "Roboto";
@@ -69,9 +68,6 @@ section {
     grid-template-rows: auto;
 }
 
-/*__________________Landing page*/
-
-
 footer {
     margin-block: 100px;
 
@@ -84,10 +80,6 @@ footer {
 .white-line-figure {
     background-color: var(--white);
 }
-
-
-
-/*______________________Projects*/
 
 .section-title {
     font-size: var(--section-title);
@@ -107,14 +99,6 @@ footer {
     & span {
         color: var(--purple);
     }
-}
-
-
-.projectBox {
-    animation: fade-in linear;
-    /* animation-timeline: view(100px); */
-    animation-range: cover;
-
 }
 
 #projects,
@@ -140,7 +124,7 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    #project,
+    #projects,
     #hockey,
     #military {
         border-bottom: none;
@@ -168,7 +152,6 @@ footer {
         width: fit-content;
 
     }
-
 
     footer {
         margin-block: 60px;

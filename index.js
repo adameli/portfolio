@@ -102,7 +102,7 @@ function startImageSlideshow(targetElement, interval = 3000) {
     const totalImages = images.length;
 
     let currentIndex = 0; // Track the current active image
-    let slideshowInterval; // Store the interval ID for stopping if needed
+    let slideshowInterval;
 
     function showImage(index) {
         images.forEach((img, i) => {
@@ -119,16 +119,9 @@ function startImageSlideshow(targetElement, interval = 3000) {
         }, interval);
     }
 
-    function stopSlideshow() {
-        clearInterval(slideshowInterval); // Stops the slideshow
-    }
 
     startSlideshow(); // Start the slideshow on function call
 
-    return {
-        stop: stopSlideshow, // Expose a way to stop the slideshow
-        start: startSlideshow, // Expose a way to restart the slideshow
-    };
 }
 
 function startImageScroll(targetElement, parent) {
