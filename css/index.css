@@ -136,6 +136,12 @@ footer {
 
 }
 
+#projects,
+#hockey,
+#military {
+    border-bottom: 4px solid #2d343f;
+}
+
 @keyframes fade-in {
     from {
         scale: .8;
@@ -153,9 +159,25 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    #project,
+    #hockey,
+    #military {
+        border-bottom: none;
+    }
+
 }
 
 @media (max-width: 600px) {
+
+    section {
+        padding-block: 60px;
+    }
+
+    .container {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
     .grid-2-columns {
         grid-row-gap: 50px;
     }

@@ -1,5 +1,27 @@
 "use strict"
 
+let isPhoneSize = false
+const journeyContainers = document.querySelectorAll('.journey-container')
+const stickeyContainers = document.querySelectorAll('.journey-container .grid-2-columns')
+console.log(journeyContainers);
+console.log(stickeyContainers);
+
+
+
+window.addEventListener("resize", windowSize)
+windowSize()
+
+function windowSize() {
+    if (window.innerWidth < 1023) {
+        isPhoneSize = true
+        stickeyContainers.forEach(element => element.classList.remove('sticky-container'))
+        journeyContainers.forEach(element => element.classList.remove('height'))
+    } else {
+        stickeyContainers.forEach(element => element.classList.add('sticky-container'))
+        journeyContainers.forEach(element => element.classList.add('height'))
+
+    }
+}
 
 
 
@@ -53,14 +75,13 @@ const observer = new IntersectionObserver((entries) => {
                 entry.target.classList.add('show-projects');
                 break;
             case 'hockey':
-                document.body.classList.add('in-hockey'); // Optional: to manage styles globally
-                // startImageScroll(entry.target, 'hockey');
-                startImageSlideshow(entry.target, 3000)
+                if (isPhoneSize) startImageSlideshow(entry.target, 3000)
+                startImageScroll(entry.target, 'hockey');
+
                 break;
             case 'military':
-                document.body.classList.add('in-military'); // Optional: to manage styles globally
-                // startImageScroll(entry.target, 'military');
-                startImageSlideshow(entry.target, 3000)
+                if (isPhoneSize) startImageSlideshow(entry.target, 3000)
+                startImageScroll(entry.target, 'military');
                 break;
 
         }
@@ -74,21 +95,6 @@ observer.observe(heroWrapper);
 projectBoxes.forEach(box => observer.observe(box));
 observer.observe(document.querySelector('#hockey-observer'));
 observer.observe(document.querySelector('#military-observer'));
-
-
-// window.addEventListener("scroll", setScrollVar)
-// // window.addEventListener("resize", setScrollVar)
-
-// function setScrollVar() {
-//     const htmlElement = document.documentElement;
-//     const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight;
-//     // console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
-//     console.log(percentOfScreenHeightScrolled);
-
-//     htmlElement.style.setProperty("--scroll", Math.min(percentOfScreenHeightScrolled * 100, 100));
-// }
-
-// setScrollVar()
 
 function startImageSlideshow(targetElement, interval = 3000) {
     const images = targetElement.querySelectorAll('.image');
@@ -124,36 +130,45 @@ function startImageSlideshow(targetElement, interval = 3000) {
     };
 }
 
+function startImageScroll(targetElement, parent) {
+    const parentSection = document.getElementById(parent)
+    const images = targetElement.querySelectorAll('.image');
+    const totalImages = images.length;
 
-// Scroll logic for hockey section
-// function startImageScroll(targetElement, parent) {
-//     const parentSection = document.getElementById(parent)
-//     const images = targetElement.querySelectorAll('.image');
-//     const totalImages = images.length;
+    function handleScroll() {
+        const rect = parentSection.getBoundingClientRect();
+        const progress = Math.min(Math.max(0, -rect.top / rect.height), 1); // 0 to 1
 
-//     function handleScroll() {
-//         const rect = parentSection.getBoundingClientRect();
-//         const progress = Math.min(Math.max(0, -rect.top / rect.height), 1); // 0 to 1
-//         console.log(progress);
+        const activeIndex = Math.floor(progress * totalImages);
+        const isLastImage = activeIndex === totalImages - 1;
 
+        images.forEach((img, index) => {
+            img.classList.toggle('active', index === activeIndex);
+        });
 
-//         const activeIndex = Math.floor(progress * totalImages);
-//         const isLastImage = activeIndex === totalImages - 1;
+        // Extend the visibility of the last image before transitioning
+        if (isLastImage && progress >= 0.6) {
+            const lastImage = images[totalImages - 1];
+            lastImage.classList.add('active');
 
-//         images.forEach((img, index) => {
-//             img.classList.toggle('active', index === activeIndex);
-//         });
+            document.body.classList.remove('in-hockey');
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }
 
-//         // Extend the visibility of the last image before transitioning
-//         if (isLastImage && progress >= 0.6) {
-//             const lastImage = images[totalImages - 1];
-//             lastImage.classList.add('active');
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+}
 
-//             document.body.classList.remove('in-hockey');
-//             window.removeEventListener('scroll', handleScroll);
-//         }
-//     }
+// window.addEventListener("scroll", setScrollVar)
 
-//     window.addEventListener('scroll', handleScroll);
-//     handleScroll(); // Initial call
+// function setScrollVar() {
+//     const htmlElement = document.documentElement;
+//     const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight;
+//     // console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
+//     console.log(percentOfScreenHeightScrolled);
+
+//     htmlElement.style.setProperty("--scroll", Math.min(percentOfScreenHeightScrolled * 100, 100));
 // }
+
+// setScrollVar()
