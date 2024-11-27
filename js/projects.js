@@ -22,7 +22,7 @@ const projects = [
     },
     {
         id: "sydstil",
-        imgSrc: "resources/projectImages/sydstil.png",
+        imgSrc: "resources/projectImages/sydstil.jpg",
         tags: ["Development", "UI/UX", "Business"],
         title: "Syd Stil",
         link: "https://sydstil.se/"
@@ -36,7 +36,7 @@ const projects = [
     },
     {
         id: "pasprang",
-        imgSrc: "resources/projectImages/pasprang.png",
+        imgSrc: "resources/projectImages/pasprang.jpg",
         tags: ["Team project", "Mobile", "Game", "PHP", "JS"],
         title: "På Språng",
         link: "https://students.maumt.se/WDU22/wilma/pasprang/"
