@@ -133,6 +133,14 @@
     transition-delay: 1s;
 }
 
+.project-box:nth-child(7) {
+    transform: translateX(-200px);
+    opacity: 0;
+
+    transition: transform 1s, opacity 2s;
+    transition-delay: .5s;
+}
+
 .show-projects {
     transform: translateX(0) !important;
     opacity: 1 !important;

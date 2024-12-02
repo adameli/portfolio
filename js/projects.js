@@ -40,6 +40,13 @@ const projects = [
         tags: ["Team project", "Mobile", "Game", "PHP", "JS"],
         title: "På Språng",
         link: "https://students.maumt.se/WDU22/wilma/pasprang/"
+    },
+    {
+        id: "galaxy",
+        imgSrc: "resources/projectImages/galaxy.png",
+        tags: ["Three.js", "React Three Fiber", "3D", "JS"],
+        title: "Galaxy",
+        link: "https://galaxy-lilac-eight.vercel.app/"
     }
 ];
 
