@@ -4,7 +4,7 @@ const projects = [
         imgSrc: "resources/projectImages/classcode.png",
         tags: ["Team project", "Website", "PHP", "JS"],
         title: "ClassCode",
-        link: "https://wdu.maumt.se/ht22/bed_bird/ClassCode/"
+        link: "https://www.thardemo.com/app/classcode/"
     },
     {
         id: "connectfour",
