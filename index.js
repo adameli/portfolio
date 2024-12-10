@@ -1,23 +1,23 @@
 "use strict"
 
-let isPhoneSize = false
+let isPhoneSize = true
 const journeyContainers = document.querySelectorAll('.journey-container')
 const stickeyContainers = document.querySelectorAll('.journey-container .grid-2-columns')
 
-window.addEventListener("resize", windowSize)
-windowSize()
+// window.addEventListener("resize", windowSize)
+// windowSize()
 
-function windowSize() {
-    if (window.innerWidth < 1023) {
-        isPhoneSize = true
-        stickeyContainers.forEach(element => element.classList.remove('sticky-container'))
-        journeyContainers.forEach(element => element.classList.remove('height'))
-    } else {
-        stickeyContainers.forEach(element => element.classList.add('sticky-container'))
-        journeyContainers.forEach(element => element.classList.add('height'))
+// function windowSize() {
+//     if (window.innerWidth < 1023) {
+//         isPhoneSize = true
+//         stickeyContainers.forEach(element => element.classList.remove('sticky-container'))
+//         journeyContainers.forEach(element => element.classList.remove('height'))
+//     } else {
+//         stickeyContainers.forEach(element => element.classList.add('sticky-container'))
+//         journeyContainers.forEach(element => element.classList.add('height'))
 
-    }
-}
+//     }
+// }
 
 
 
